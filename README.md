@@ -7,6 +7,7 @@
 * [npm入门(常用命令)](./tool/npm入门(常用命令).md)
 * [npm高级](./tool/npm高级.md)
 * [babel](./tool/babel.md)
+* [eslint](./tool/eslint.md)
 
 ### css
 * [rem适配方案](./css/rem适配方案.md)
