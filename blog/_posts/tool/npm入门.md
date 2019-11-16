@@ -1,3 +1,13 @@
+---
+date: 2018-11-7
+tag: 
+  - npm
+  - web
+author: kukiiu
+location: ShenZhen  
+---
+# npm入门
+
 # npm是什么
 - [npm](https://www.npmjs.com/)是一个仓库网站，收集了各种有用的js库，也可以发布自己的js库到网站上分享给别人
 - npm是命令行工具 (CLI)，一个js包管理工具，内置的命令可以方便的管理项目依赖

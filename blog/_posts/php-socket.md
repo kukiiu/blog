@@ -1,4 +1,11 @@
-# 最简服务器：
+---
+date: 2018-11-7
+tag: 
+  - php
+author: kukiiu
+location: ShenZhen  
+---
+# PHP Socket
 
 ## 知识点
 * stream_socket_server - 创建一个Internet或Unix域服务器套接字

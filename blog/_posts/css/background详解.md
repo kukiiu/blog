@@ -1,3 +1,13 @@
+---
+date: 2018-11-7
+tag: 
+  - web
+  - css
+author: kukiiu
+location: ShenZhen  
+---
+# background详解
+
 ## 背景图绘制顺序
 - 先绘制background-color
 - 先设置的图像绘制在最顶部

@@ -1,3 +1,13 @@
+---
+date: 2018-11-7
+tag: 
+  - npm
+  - web
+author: kukiiu
+location: ShenZhen  
+---
+# npm入门-常用命令
+
 ## 查看依赖信息
 ```shell
 $ npm view react

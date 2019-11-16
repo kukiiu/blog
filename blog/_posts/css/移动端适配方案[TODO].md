@@ -1,3 +1,13 @@
+---
+date: 2018-11-7
+tag: 
+  - web
+  - css
+author: kukiiu
+location: ShenZhen  
+---
+# 移动端适配方案
+
 ## 标准适配方案：百分比自适应(流式布局) + viewport
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">

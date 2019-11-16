@@ -1,3 +1,12 @@
+---
+date: 2018-11-7
+tag: 
+  - markdown
+author: kukiiu
+location: ShenZhen  
+---
+# Markdown使用指南
+
 # 标题
 ```markdown
 # 这是一级标题
@@ -58,16 +67,10 @@ title可加可不加
 图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加
 图片居中：
 <div align=center>
-
 ![点滴轻舍.png](http://phg1rho3u.bkt.clouddn.com/logo.png)
 </div>
 ```
 ![点滴轻舍.png](http://phg1rho3u.bkt.clouddn.com/logo.png)
-
-<div align=center>
-
-![点滴轻舍.png](http://phg1rho3u.bkt.clouddn.com/logo.png)
-</div>
 
 # 列表
 ```markdown

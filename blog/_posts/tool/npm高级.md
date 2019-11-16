@@ -1,3 +1,13 @@
+---
+date: 2018-11-7
+tag: 
+  - npm
+  - web
+author: kukiiu
+location: ShenZhen  
+---
+# npm高级
+
 ## 错误处理
 [EACCES权限问题解决办法见](https://www.npmjs.com.cn/getting-started/fixing-npm-permissions/)
 [常见错误处理](https://www.npmjs.com.cn/troubleshooting/common-errors/)

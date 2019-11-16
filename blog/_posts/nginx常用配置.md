@@ -1,4 +1,11 @@
-# 转发
+---
+date: 2018-11-7
+tag: 
+  - nginx
+author: kukiiu
+location: ShenZhen  
+---
+# nginx常用配置
 ```shell
 # 将以 /tag/开头的Url转发到http://www.tag.com/上
 server {

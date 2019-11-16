@@ -1,4 +1,12 @@
-<h1 align="center">Eslint 代码规则配置</h1>
+---
+date: 2018-11-7
+tag: 
+  - eslint
+  - web
+author: kukiiu
+location: ShenZhen  
+---
+# Eslint 代码规则配置
 
 <br>
 

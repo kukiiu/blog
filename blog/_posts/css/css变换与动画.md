@@ -1,4 +1,13 @@
-# transform 变换
+---
+date: 2018-11-7
+tag: 
+  - web
+  - css
+author: kukiiu
+location: ShenZhen  
+---
+# css变换与动画
+## transform 变换
 > transform 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜。
 
 > transform-origin: x-axis y-axis z-axis; 指定元素变化基点
@@ -39,7 +48,7 @@ div {
 | perspective(n)|	为 3D 转换元素定义透视视图。	|
 
 
-# transition 过渡动画
+## transition 过渡动画
 > transition指定css属性变化时的过渡效果
 
 ```html
@@ -62,7 +71,7 @@ transition-delay	定义过渡效果何时开始。
 ```
 
 
-# animation 动画
+## animation 动画
 
 ```html
 @keyframes	规定动画
@@ -112,7 +121,7 @@ div {
 - backwards	在 animation-delay 所指定的一段时间内，在动画显示之前，应用开始属性值（在第一个关键帧中定义）
 - both	向前和向后填充模式都被应用
 
-# 参考资料
-[w3school: transform](http://www.w3school.com.cn/cssref/pr_transform.asp)
-[w3school: transition](http://www.w3school.com.cn/cssref/pr_transition.asp)
-[w3school: animation](http://www.w3school.com.cn/css3/css3_animation.asp)
+## 参考资料
+[w3school: transform](http://www.w3school.com.cn/cssref/pr_transform.asp)  
+[w3school: transition](http://www.w3school.com.cn/cssref/pr_transition.asp)  
+[w3school: animation](http://www.w3school.com.cn/css3/css3_animation.asp) 

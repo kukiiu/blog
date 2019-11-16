@@ -1,3 +1,13 @@
+---
+date: 2018-11-7
+tag: 
+  - npm
+  - web
+author: kukiiu
+location: ShenZhen  
+---
+# npm入门-package.json
+
 # 为什么要有package.json
 > The best way to manage locally installed npm packages is to create a package.json file.
 

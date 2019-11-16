@@ -1,10 +1,20 @@
-# 为什么要用rem适配
+---
+date: 2018-11-7
+tag: 
+  - web
+  - css
+author: kukiiu
+location: ShenZhen  
+---
+# rem适配方案
+
+## 为什么要用rem适配
 * 百分比布局，flex布局，响应式布局 只能做宽度适配（图片除外）
 兼容性	Ios	安卓
 rem	4.1+	2.1+
 vw	6.1+	4.4+
 
-# rem可以做什么
+## rem可以做什么
 通过媒体查询或js控制html的font-size来控制所有以rem为单位的元素大小
 ```html
 <html lang="en" style="font-size: 100px;">
@@ -15,8 +25,8 @@ vw	6.1+	4.4+
 </html>
 ```
 
-# rem适配原理
-## 问题引出：有iphone6手机下1px元素，在不同屏幕尺寸下面应该显示多少才能算比例相同？
+## rem适配原理
+### 问题引出：有iphone6手机下1px元素，在不同屏幕尺寸下面应该显示多少才能算比例相同？
 iphone6屏幕尺寸: 375px
 元素宽度: 1px
 其他屏幕尺寸: 360px, 414px...
@@ -34,7 +44,7 @@ iphone6屏幕尺寸: 375px
 此时，该元素在所有屏幕下统一使用1rem为单位，在所有屏幕下比例都相同
 设计稿的尺寸换算成rem单位: 1px = 1rem
 
-## 问题引出：有设计稿750px下1px元素，在不同屏幕下面应该显示多少才能算比例相同？
+### 问题引出：有设计稿750px下1px元素，在不同屏幕下面应该显示多少才能算比例相同？
 设计稿尺寸(DW): 750px
 手机屏幕尺寸(Wi): 360px, 375px, 414px...
 约束: 在不同屏幕尺寸下，元素的尺寸比例相同
@@ -69,12 +79,12 @@ window.onresize = function() {
 }
 ```   
 
-# 网站适配方案
+## 网站适配方案
 [Boss直聘](https://www.zhipin.com/c101280600-p100901/?ka=position-100901)
 [淘宝](https://h5.m.taobao.com/)
 
 
-# 媒体查询
+## 媒体查询
 ```css
 html{font-size:10px}
 @media screen and (max-width:321px){html{font-size:10px}}
@@ -87,7 +97,7 @@ html{font-size:10px}
 @media screen and (min-width:800px){html{font-size:25px}}
 ```   
 
-# 普通适配
+## 普通适配
 如果将屏幕分成10份，每份长度为1rem，则屏幕分为10rem
 width=50% = 5rem
 ```js
@@ -95,7 +105,7 @@ window.onresize = function() {
   document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
 }
 ```
-# 网易适配
+## 网易适配
 设计稿尺寸已知道 =》 Xpx，注：设计稿尺寸是手机尺寸的2倍
 以100px设计稿为单位作为1rem，因为量取方便，即预设基准值
 ->则设计稿为 D = X/100 rem
@@ -110,7 +120,7 @@ window.onresize = function() {
 ```
 
 
-# 淘宝适配
+## 淘宝适配
 淘宝设计师的工作流程：
 第一步，视觉设计阶段，设计师按宽度750px（iPhone 6）做设计稿，除图片外所有设计元素用矢量路径来做。设计定稿后在750px的设计稿上做标注，输出标注图。同时等比放大1.5倍生成宽度1125px的设计稿，在1125px的稿子里切图。
 第二步，输出两个交付物给开发工程师：一个是程序用到的@3x切图资源，另一个是宽度750px的设计标注图。
@@ -118,9 +128,9 @@ window.onresize = function() {
 第四步，适配调试阶段，基于iPhone 6的界面效果，分别向上向下调试iPhone 6 plus（414pt）和iPhone 5S及以下（320pt）的界面效果。由此完成大中小三屏适配。
 
 
-# 参考资料
-[从网易与淘宝的font-size思考前端设计稿与工作流](http://www.cnblogs.com/lyzg/p/4877277.html)
-[使用Flexible实现手淘H5页面的终端适配](https://www.w3cplus.com/mobile/lib-flexible-for-html5-layout.html)
-[再聊移动端页面的适配](https://www.w3cplus.com/css/vw-for-layout.html)
-[如何在Vue项目中使用vw实现移动端适配](https://www.w3cplus.com/mobile/vw-layout-in-vue.html)
-[Rem布局的原理解析](https://yanhaijing.com/css/2017/09/29/principle-of-rem-layout/)
+## 参考资料
+[从网易与淘宝的font-size思考前端设计稿与工作流](http://www.cnblogs.com/lyzg/p/4877277.html)  
+[使用Flexible实现手淘H5页面的终端适配](https://www.w3cplus.com/mobile/lib-flexible-for-html5-layout.html)  
+[再聊移动端页面的适配](https://www.w3cplus.com/css/vw-for-layout.html)  
+[如何在Vue项目中使用vw实现移动端适配](https://www.w3cplus.com/mobile/vw-layout-in-vue.html)  
+[Rem布局的原理解析](https://yanhaijing.com/css/2017/09/29/principle-of-rem-layout/)  
