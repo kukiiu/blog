@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Eslint 代码规则配置 | Kukiiu Blog</title>
+    <meta name="description" content="This is a blog example built by VuePress">
+    
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.98a8369e.css" as="style"><link rel="preload" href="/blog/assets/js/app.109f7f5e.js" as="script"><link rel="preload" href="/blog/assets/js/4.46a97fb5.js" as="script"><link rel="preload" href="/blog/assets/js/5.2e68ac0d.js" as="script"><link rel="preload" href="/blog/assets/js/25.ea56a589.js" as="script"><link rel="prefetch" href="/blog/assets/js/1.c3aa2cd3.js"><link rel="prefetch" href="/blog/assets/js/10.95e369df.js"><link rel="prefetch" href="/blog/assets/js/11.85192d52.js"><link rel="prefetch" href="/blog/assets/js/12.991eed33.js"><link rel="prefetch" href="/blog/assets/js/13.2431ca26.js"><link rel="prefetch" href="/blog/assets/js/14.654609fb.js"><link rel="prefetch" href="/blog/assets/js/15.39e69815.js"><link rel="prefetch" href="/blog/assets/js/16.65db32f5.js"><link rel="prefetch" href="/blog/assets/js/17.cfffb51f.js"><link rel="prefetch" href="/blog/assets/js/18.cd9829f6.js"><link rel="prefetch" href="/blog/assets/js/19.900ca075.js"><link rel="prefetch" href="/blog/assets/js/20.746c162a.js"><link rel="prefetch" href="/blog/assets/js/21.a54ef64b.js"><link rel="prefetch" href="/blog/assets/js/22.5660eb8e.js"><link rel="prefetch" href="/blog/assets/js/23.fc219947.js"><link rel="prefetch" href="/blog/assets/js/24.ca931382.js"><link rel="prefetch" href="/blog/assets/js/26.8a547a21.js"><link rel="prefetch" href="/blog/assets/js/27.5b14e157.js"><link rel="prefetch" href="/blog/assets/js/28.32d557d5.js"><link rel="prefetch" href="/blog/assets/js/29.a7808df1.js"><link rel="prefetch" href="/blog/assets/js/30.4d84f1c7.js"><link rel="prefetch" href="/blog/assets/js/6.1ae99955.js"><link rel="prefetch" href="/blog/assets/js/7.0891d004.js"><link rel="prefetch" href="/blog/assets/js/8.ee738a46.js"><link rel="prefetch" href="/blog/assets/js/9.dd98dc71.js"><link rel="prefetch" href="/blog/assets/js/vuejs-paginate.14c0cfca.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.98a8369e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuperess-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/blog/" class="nav-link home-link">Kukiiu Blog
+        </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li><li class="nav-item"><a href="/blog/tag/" class="nav-link">Tags</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/blog/" class="nav-link mobile-home-link">Kukiiu Blog
+      </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/blog/" class="nav-link">Blog</a></li><li class="mobile-nav-item"><a href="/blog/tag/" class="nav-link">Tags</a></li></ul></div></div></div> <div class="content-wrapper"><div id="vuperess-theme-blog__post-layout"><div class="vuepress-blog-theme-content"><div class="content__default"><h1 id="eslint-代码规则配置"><a href="#eslint-代码规则配置" class="header-anchor">#</a> Eslint 代码规则配置</h1> <br> <h2 id="代码检测工具发展"><a href="#代码检测工具发展" class="header-anchor">#</a> 代码检测工具发展</h2> <p>第一代: JSLint不可配置的JavaScript代码检测工具</p> <p>第二代: JSHint和JSLint一样，但具有以下优势：1、可配置规则。2、社区支持度高。3、可定制结果报表</p> <p>第三代: ESLint是利用AST处理规则，用Esprima解析代码，可扩展性强，可平滑支持es6和react</p> <h2 id="eslint-是什么"><a href="#eslint-是什么" class="header-anchor">#</a> ESLint 是什么</h2> <p>ESLint是一个开源的JavaScript代码检查工具，代码检查是一种静态的分析，常用于寻找有问题的模式或者代码，并且不依赖于具体的编码风格。对大多数编程语言来说都会有代码检查，一般来说编译程序会内置检查工具。</p> <p>JavaScript是一个动态的弱类型语言，在开发中比较容易出错。因为没有编译程序，为了寻找JavaScript代码错误通常需要在执行过程中不断调试。像ESLint这样的可以让程序员在编码的过程中发现问题而不是在执行的过程中。</p> <p>提供了以下功能：</p> <ul><li>检查JavaScript/TypeScript/JSX的语法错误</li> <li>提示潜在的bug</li> <li>一致的编码风格</li></ul> <h2 id="常见的错误"><a href="#常见的错误" class="header-anchor">#</a> 常见的错误</h2> <ul><li>Uncaught TypeError: Cannot read property</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> foo<span class="token punctuation">;</span>
+foo<span class="token punctuation">.</span>bar<span class="token punctuation">;</span>
+</code></pre></div><ul><li>TypeError: ‘undefined’ is not a function</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>Uncaught RangeError</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>Uncaught TypeError: Cannot set property</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token keyword">undefined</span>
+foo<span class="token punctuation">.</span>bar <span class="token operator">=</span> <span class="token number">1</span>
+</code></pre></div><h2 id="eslint解析器"><a href="#eslint解析器" class="header-anchor">#</a> ESLint解析器</h2> <ul><li><p>esprima(default)</p></li> <li><p>babel-eslint</p></li></ul> <blockquote><p>https://github.com/babel/babel-eslint</p></blockquote> <p>使用babel-eslint解析器可以检查所有Babel支持的语法，有些Babel支持的新语法在默认解析器也支持，如果默认解析器支持项目里的语法，就没有必要使用</p> <ul><li>@typescript/parse</li></ul> <blockquote><p>https://www.npmjs.com/package/@typescript-eslint/parser#configuration</p></blockquote> <p>用于解析TypeScript语法, parserOptions与默认解析器有所不同</p> <h2 id="使用eslint"><a href="#使用eslint" class="header-anchor">#</a> 使用ESLint</h2> <div class="language-shell extra-class"><pre class="language-text"><code># 安装
+npm install eslint
+
+# 初始化
+eslint --init
+</code></pre></div><p>eslintrc.json 配置</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    <span class="token comment">// 解析器类型 esprima(default) babel-eslint @typescript/parse</span>
+    parse<span class="token punctuation">:</span> <span class="token string">'esprima'</span><span class="token punctuation">,</span>
+    <span class="token comment">// 解析器配置参数</span>
+    parseOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 代码类型: script(default), module</span>
+        sourceType<span class="token punctuation">:</span> <span class="token string">&quot;script&quot;</span><span class="token punctuation">,</span>
+        <span class="token comment">// es版本号, 默认为5，也可使用年份</span>
+        ecamVersion<span class="token punctuation">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+        <span class="token comment">// es特征配置</span>
+        ecmaFeatures<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 运行在全局作用域下使用return</span>
+            globalReturn<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token comment">// 启用全局strict mode</span>
+            impliedStrict<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token comment">// 启用JSX</span>
+            jsx<span class="token punctuation">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 即使没有 babelrc 配置文件，也使用 babel-eslint 来解析</span>
+        requireConfigFile<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token comment">// 仅允许 import export 语句出现在模块的顶层</span>
+        allowImportExportEverywhere<span class="token punctuation">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+    settings<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        react<span class="token punctuation">:</span> <span class="token punctuation">{</span>                  
+             version<span class="token punctuation">:</span> <span class="token string">'detect'</span> <span class="token comment">// React version. &quot;detect&quot; automatically picks the version you have installed.                                               </span>
+                                 <span class="token comment">// You can also use `16.0`, `16.3`, etc, if you want to override the detected value.                                              </span>
+                                 <span class="token comment">// default to latest and warns if missing                                             </span>
+                                 <span class="token comment">// It will default to &quot;detect&quot; in the future                 </span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 以当前目录为根目录，不再向上查找 .eslintrc.js</span>
+    root<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token comment">// 全局变量声明，true表示writeable, false表示readonly</span>
+    globals<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 声明jQuery未全局变量</span>
+        <span class="token string">'$'</span><span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token comment">// </span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 用于简化globals设置，一项env包括多个globals选项</span>
+    env<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        browser<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        node<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        commonjs<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// exports: true, global: false, module: false, require: false</span>
+        es6<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        jquery<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// $: false, jQuery: false</span>
+        amd<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// define: false, requier: false</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token comment">// ...</span>
+    <span class="token punctuation">]</span>
+    <span class="token keyword">extends</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token comment">// ...</span>
+    <span class="token punctuation">]</span>
+    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token comment">// ...</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="插件"><a href="#插件" class="header-anchor">#</a> 插件</h2> <p>因为官方规则只能检测标准JavaScript语法，如果写的是JSX或VUE，就需要插件支持检测，插件以eslint-plugin-开头</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;react&quot;</span><span class="token punctuation">,</span> <span class="token comment">// eslint-plugin-react</span>
+        <span class="token string">&quot;vue&quot;</span><span class="token punctuation">,</span> <span class="token comment">// eslint-plugin-vue</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="扩展"><a href="#扩展" class="header-anchor">#</a> 扩展</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    <span class="token keyword">extends</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;eslint:recommended&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;eslint-config-standard&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;plugin:react/recommended&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>eslint:开头的是ESLint官方扩展，有两个： eslint:recommended, eslint:all</li> <li>npm扩展，规定必须以eslint-config-开头，否则无法找到，使用时可省略这个开头</li> <li>plugin:${pluginName}/${configName} 为插件+扩展形式引入，这种方式就不需要在plugins定义插件</li></ul> <h2 id="规则设置"><a href="#规则设置" class="header-anchor">#</a> 规则设置</h2> <p>每一条规则第一个参数接受以下值：</p> <ul><li>'off'/ 0: 关闭规则</li> <li>'warn' / 1: 开启warn级别的检测</li> <li>'error' / 2: 开启error级别的检测</li></ul> <h2 id="发布自己的扩展规则"><a href="#发布自己的扩展规则" class="header-anchor">#</a> 发布自己的扩展规则</h2> <ul><li>需要将包命名为eslint-config-xxx</li> <li>package.json中peerDependencies指定eslint版本</li></ul> <h2 id="开发自己的插件"><a href="#开发自己的插件" class="header-anchor">#</a> 开发自己的插件</h2> <div class="language-shell extra-class"><pre class="language-text"><code># 安装插件Yeoman模板
+npm install -g yo generator-eslint
+
+# 创建模板
+yo eslint:plugin
+
+# 创建规则
+yo eslint:rule
+</code></pre></div><h2 id="最佳配置"><a href="#最佳配置" class="header-anchor">#</a> 最佳配置</h2> <ul><li>airbnb style</li> <li>javascripte standard</li> <li>elsint-config-alloy</li></ul> <h2 id="为什么不用tslint"><a href="#为什么不用tslint" class="header-anchor">#</a> 为什么不用TSLint</h2> <p><strong>Palantir将在2019年停止维护TSLint</strong></p> <p>使用TSLint优点</p> <ul><li>不需要任何工具来协调AST格式之间的差异</li></ul> <p>使用TSLint缺点</p> <ul><li>将没办法复用围绕JavaScript构建的lint生态，如规则和自动修复等</li></ul> <h2 id="名词参考"><a href="#名词参考" class="header-anchor">#</a> 名词参考</h2> <ul><li>TSLint: Palantir公司出的TS代码检查工具</li> <li>ESLint: JS代码检查工具</li> <li>typescript-eslint: 新的Eslint插件，处理TS</li> <li>typescript-eslint-parser: 旧的ESLint插件，处理TS</li></ul> <h2 id="参考资料"><a href="#参考资料" class="header-anchor">#</a> 参考资料</h2> <p><a href="http://eslint.cn/" target="_blank" rel="noopener noreferrer">ESlint中文网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://github.com/typescript-eslint/typescript-eslint" target="_blank" rel="noopener noreferrer">TypeScript ESLint 仓库<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://rollbar.com/blog/top-10-javascript-errors/" target="_blank" rel="noopener noreferrer">JavaScript项目Top10错误类型<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://www.zhihu.com/question/308844713/answer/574423626" target="_blank" rel="noopener noreferrer">TypeScript 解决了什么痛点 - 知乎<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://www.cnblogs.com/xiaohuochai/p/9076440.html" target="_blank" rel="noopener noreferrer">ESlint介绍<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <hr> <!----></div> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#代码检测工具发展" title="代码检测工具发展">代码检测工具发展</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#eslint-是什么" title="ESLint 是什么">ESLint 是什么</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#常见的错误" title="常见的错误">常见的错误</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#eslint解析器" title="ESLint解析器">ESLint解析器</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#使用eslint" title="使用ESLint">使用ESLint</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#插件" title="插件">插件</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#扩展" title="扩展">扩展</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#规则设置" title="规则设置">规则设置</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#发布自己的扩展规则" title="发布自己的扩展规则">发布自己的扩展规则</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#开发自己的插件" title="开发自己的插件">开发自己的插件</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#最佳配置" title="最佳配置">最佳配置</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#为什么不用tslint" title="为什么不用TSLint">为什么不用TSLint</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#名词参考" title="名词参考">名词参考</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#参考资料" title="参考资料">参考资料</a></div></div></div></div> <footer class="footer" data-v-0d113134><div class="footer-left-wrap" data-v-0d113134><ul class="contact" data-v-0d113134><li class="contact-item" data-v-0d113134><a href="https://github.com/kukiiu" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-0d113134><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-0d113134><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-0d113134></path></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-0d113134><ul class="copyright" data-v-0d113134><li class="copyright-item" data-v-0d113134><a href="https://policies.google.com/privacy?hl=en-US" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-0d113134>Privacy Policy</a></li><li class="copyright-item" data-v-0d113134><a href="/blog/2018/11/07/eslint/.html" class="nav-link" data-v-0d113134>MIT Licensed | Copyright © 2018-present Vue.js</a></li></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.109f7f5e.js" defer></script><script src="/blog/assets/js/4.46a97fb5.js" defer></script><script src="/blog/assets/js/5.2e68ac0d.js" defer></script><script src="/blog/assets/js/25.ea56a589.js" defer></script>
+  </body>
+</html>
