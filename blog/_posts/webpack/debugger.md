@@ -7,7 +7,6 @@ location: ShenZhen
 ---
 
 # 调试
-<!-- TOC -->autoauto- [调试](#调试)auto    - [为什么要调试](#为什么要调试)auto    - [跑起来demo.js](#跑起来demojs)auto    - [基础操作](#基础操作)auto    - [调用堆栈](#调用堆栈)auto    - [skipFiles](#skipfiles)auto    - [eval 和 已载入的脚本](#eval-和-已载入的脚本)auto    - [异步调用](#异步调用)auto    - [调试webpack](#调试webpack)auto        - [注意事项](#注意事项)autoauto<!-- /TOC -->
 
 ## 为什么要调试
 webpack源码写的还是比较绕，各种回调，递归和异步跳来跳去，刚开始跟代码时容易迷失方向。console.log在处理复杂流程就稍显薄弱，调试简单的代码还行，但是遇到各种异步方法和递归调用时，只通过log打印出来的东西很难看得懂。看代码时有时候需要我们深入到各个子流程中，有时候又要忽略细节只看整体，所以灵活使用调试工具显得尤为重要。当然，必要的console.log也是需要的，需要我们根据情况选择合适的工具。
