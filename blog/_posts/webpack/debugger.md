@@ -32,12 +32,12 @@ printArgv()
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node", // 调试node代码
-            "request": "launch", // 独立运行调试程序
+            "type": "node",
+            "request": "launch",
             "name": "启动程序",
-            "skipFiles": [ "<node_internals>/**" ], // 调试时需要跳过的文件
-            "program": "${workspaceFolder}/demo.js", // 运行根目录下的demo.js文件
-            "args": ["-o", "bundle.js"] // 启动参数
+            "skipFiles": [ "<node_internals>/**" ],
+            "program": "${workspaceFolder}/demo.js",
+            "args": ["-o", "bundle.js"]
         }
     ]
 }
