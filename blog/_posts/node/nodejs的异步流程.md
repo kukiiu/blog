@@ -49,20 +49,43 @@ console.timeEnd('running')
 ## 同步调用转换为异步调用
 在处理CPU密集型（图片处理，加解密，复杂算法）等操作时，如果直接在代码中运行有可能出现主流程暂时卡住情况，有没有办法将他们转换为异步函数呢？
 
+### setTimeout
 先看看setTimeout，它本身是异步操作。在调用setTimeout后立即返回，且经过了设定时间后，通知主流程等待完成，只不过这个异步操作的执行内容只是等待，其他什么也没做。setTimeout的异步并不是我们需要的能封装耗时操作的异步，耗时操作还是会在回调时同步地在主流程运行。
 ```js
+console.time('main')
+console.time('begin')
+console.time('finish')
 setTimeout(() => {
-    handlePicture()
-}, 1000)
+    console.timeEnd('begin')
+    fs.writeFileSync('./data', buffer)
+    console.timeEnd('finish')
+}, 0)
+console.timeEnd('main')
+// main: 0.911ms
+// begin: 4.230ms
+// finish: 1355.096ms
 ```
 
+### Promise
 Promise则是一个包装器，通常用它来处理回调嵌套的问题，他也只能将异步函数封装成更易使用的异步函数，并不能将同步调用转为异步调用。在创建Promise后并不是立即返回，而是同步执行里面的回调函数。
 ```js
+console.time('main')
+console.time('begin')
+console.time('finish')
 new Promise((resolve) => {
-    handlePicture()
+    console.timeEnd('begin')
+    fs.writeFileSync('./data', buffer)
+    console.timeEnd('finish')
     return resolve()
 })
+console.timeEnd('main')
+// begin: 0.332ms
+// finish: 1321.230ms
+// main: 1322.646ms
 ```
+
+### nextTick
+nextTick的执行结果和setTimeout相似，本质上也只是改变了代码的调用时机，同步操作依然是在单线程里操作，所以虽然会立即执行nextTick后面内容，但是执行同步操作依然会卡住，并不是真正意义的异步。
 
 所以在语法层面并没有能够提供同步转异步的方法，很显然如果需要转为异步操作，需要让复杂操作不在主流程中处理，这就需要借助其他的工具来实现：
 - 使用child_process或cluster来创建多进程，并在新建进程中处理。
@@ -138,3 +161,7 @@ let fs = require('fs');
 [浏览器与Node的事件循环(Event Loop)有何区别?](https://www.jianshu.com/p/ca723144102b)
 
 [Node.js 线程你理解的可能是错的](https://segmentfault.com/a/1190000015262294)
+
+[designing-apis-for-asynchrony](https://blog.izs.me/2013/08/designing-apis-for-asynchrony)
+
+[callbacks-synchronous-and-asynchronous](https://blog.ometer.com/2011/07/24/callbacks-synchronous-and-asynchronous/)

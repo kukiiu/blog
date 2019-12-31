@@ -148,6 +148,24 @@ parallel会同时执行两个任务task1和task2，并在任务里面开启了�
 
 以上操作可以让我们清晰看到整个异步函数的运行流程。如果去掉上面的skipFiles，调试过程中就会进到async源码中，容易干扰我们的分析。如果没有在最后的回调中打断点，那么点下一步调试器是不会进入到最后的回调去，会直接结束。所以异步函数断点打在哪里需要大家根据实际情况，根据你要关注的源码重点进行分析。
 
+## 调试ES6 module
+有些三方库如async使用的是import/export语法来管理包，使用node是会报错，需要借助babel来转换。可以安装`@babel/node`来运行代码。在调试时我们默认使用的是node环境，所以如果调试ES6module需要在launch.json修改运行环境：
+```js
+{
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "启动程序",
+            "skipFiles": ["<node_internals>/**"],
+            "program": "${workspaceFolder}/index.js",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/babel-node"
+        }
+    ]
+}
+```
+只需要添加runtimeExecutable配置为babel-node运行文件就行，接下来就可以愉快的调试了。
+
 ## 调试webpack
 了解了如何使用调试，是为了更好的帮助我们跟踪源码，下面以webpack源码来看如何运用调试工具帮助我们理清顺序
 
