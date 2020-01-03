@@ -1,11 +1,11 @@
 # 异步工具 async / neo-async
 
-异步工具库async提供了许多工具帮助我们更优雅的处理流程控制，即任务执行顺序和控制调用时机。整个库包含了三大部分：
+异步工具库async提供了许多工具帮助我们更优雅的处理流程控制，即任务执行顺序和控制调用时机，是处理回调地狱的解决方案。整个库包含了三大部分：
 - Collections：集合操作
 - ControlFlow：控制流
 - Utils：小工具
 
-# Collections：集合操作（map，each，filter）
+# Collections：集合操作
 集合工具即是将某个集合的所有元素按一定规则进行处理，是流程控制的基础。
 
 ## each系列
@@ -13,24 +13,24 @@ each的作用就是将集合元素逐个同步开启，任务可以并行执行�
 
 eachOfLimit是其他方法的基础，大部分函数都会在底层用到。首先将集合封装成迭代器，然后逐个执行任务，开启任务前和任务结束回调后做限流控制。
 
-## 其他
+## 其他(map，filter, ...)
 其他函数功能大同小异，都是对集合中每个元素进行处理，区别主要在输出的结构。
 
 
-# ControlFlow：控制流（parallel，series，waterfall）
-流程控制即是控制任务的流转过程，任务通常以表现为一个特定函数。
+# ControlFlow：控制流
+流程控制即是控制任务的流转过程，任务通常表现为一个特定函数。
 
-## 同步开启任务（applyEach / parallel / times / sortBy / race）
+## 同步开启任务(applyEach / parallel / times / sortBy / race)
 他们都将同步开启所有任务，区别在于使用方式不同而已。和each不同在于他们是特定参数作用于所有任务，each是所有参数作用于指定函数。
 
-## 顺序执行任务（series / xxxSeries / waterfall / retry / forever）
+## 顺序执行任务(series / xxxSeries / waterfall / retry / forever)
 series将所有任务顺序地同步执行，内部实现是单任务的parallel。waterfall则是将上个任务结果传给下个任务。
 
-## 条件执行任务（whilst / until / tryEach）
+## 条件执行任务(whilst / until / tryEach)
 whilst和until类似while循环，达到某个条件后才结束任务触发。tryEach只要有任务成功就返回
 
-## 基于依赖顺序开启任务（auto / autoInject）
-任务依赖先根据卡恩算法判断是否存在循环依赖，然后同步开启任务。auto使用字符串声明依赖，autoInject使用函数参数声明依赖（利用正则匹配出参数列表）。
+## 基于依赖顺序开启任务(auto / autoInject)
+任务依赖先根据卡恩算法判断是否存在循环依赖，然后同步开启任务。auto使用字符串声明依赖，autoInject使用函数参数声明依赖(利用正则匹配出参数列表)。
 ```js
 // 解析函数参数，自动注入参数
 function parseParams(func) {
@@ -43,7 +43,7 @@ function parseParams(func) {
 }
 ```
 
-## 动态添加任务（queue / priorityQueue）
+## 动态添加任务(queue / priorityQueue)
 任务队列是基于双向列表来存储，初始化队列就生成任务队列。然后可添加相应的事件监听方法，事件会在相应的时间点触发。添加任务即执行任务。
 
 任务队列使用双向列表可快速在任意位置添加删除元素，任务队列也提供了头部添加任务方法`unshift/unshiftAsync`和尾部添加任务方法`push/pushAsync`，还提供了删除任意任务方法`remove`。链表内部实现了遍历方法`Symbol.iterator`，可以用for...of或...方法来遍历链表内容。
@@ -155,7 +155,7 @@ async.mapSeries(
     }
 );
 ```
-这个漏洞目前已经被补上，下面我们看看源码修复的位置，尝试还原这个问题，然后我们执行代码看看栈溢出结果（commitId: cd6beba687bec8112357ff72b6a610cf245590cd）：
+这个漏洞目前已经被补上，下面我们看看源码修复的位置，尝试还原这个问题，然后我们执行代码看看栈溢出结果(commitId: cd6beba687bec8112357ff72b6a610cf245590cd)：
 ```js
 // eachOfLimit.js
 // ...
