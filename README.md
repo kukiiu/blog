@@ -1,12 +1,17 @@
 [这个是主页](https://kukiiu.github.io/blog/)
 
 ## node系列
-[nodejs的异步流程](https://github.com/kukiiu/blog/blob/master/blog/_posts/node/nodejs的异步流程.md)
+[nodejs的异步流程](https://juejin.im/post/5e078c756fb9a01628014719)
+
+[require.resolve](https://juejin.im/post/5e370570e51d451c7e04ab60)
 
 ## 三方库系列
-[async - 异步流程库](https://github.com/kukiiu/blog/blob/master/blog/_posts/package/async.md)
+[async - 异步流程库](https://juejin.im/post/5e0dbfce5188253a846aa669)
 
-[memory-fs - 内存文件系统](https://github.com/kukiiu/blog/blob/master/blog/_posts/package/memory-fs.md)
+[memory-fs - 内存文件系统](https://juejin.im/post/5e0f2822e51d4540fc3bd5fe)
 
 ## webpack源码系列
-[调试](https://github.com/kukiiu/blog/blob/master/blog/_posts/webpack/debugger.md)
+[Webpack学习概论](https://juejin.im/post/5e2484cc5188254c23704a4d)
+
+[调试Webpack代码](https://juejin.im/post/5e05ca2fe51d45583b439c09)
+

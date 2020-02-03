@@ -8,7 +8,7 @@
 - 不使用Webpack的插件机制：即不会用Tapable实现Hooks，因为看得太麻烦。
 
 以下是完成计划，希望能坚持 😄
-- [x] 概论
+- [x] Webpack学习概论
 - [x] [调试Webpack源码](https://juejin.im/post/5e05ca2fe51d45583b439c09)
 
 # 基础概念
