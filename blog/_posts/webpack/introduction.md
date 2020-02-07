@@ -7,12 +7,9 @@
 - 使用TS实现：因为方便看类型。
 - 不使用Webpack的插件机制：即不会用Tapable实现Hooks，因为看得太麻烦。
 
-[github地址](https://github.com/kukiiu/freepack)
+[项目github地址](https://github.com/kukiiu/freepack)
 
-以下是完成计划，希望能坚持 😄
-- [x] Webpack学习概论
-- [x] [调试Webpack源码](https://juejin.im/post/5e05ca2fe51d45583b439c09)
-- [x] [文件查找(一) enhanced-resolve](https://juejin.im/post/5e392957f265da574d0ff946)
+[系列文章计划，希望能坚持 😄](https://github.com/kukiiu/blog)
 
 # 基础概念
 首先我们需要了解一些基础的Webpack概念，Webpack的构建流程基本是围绕以下概念进行：

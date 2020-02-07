@@ -15,3 +15,6 @@
 
 [调试Webpack代码](https://juejin.im/post/5e05ca2fe51d45583b439c09)
 
+[enhanced-resolve](https://juejin.im/post/5e392957f265da574d0ff946)
+
+[目录解析及优化](https://juejin.im/post/5e3c4e4651882549724e14cb)
