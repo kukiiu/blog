@@ -109,9 +109,9 @@ console.log(df)
 ```
 
 ## 调用位置
-`NormalModuleFactory`用于创建普通模块对象，在`create`方法中会调用创建好的`normalResolver`检查将要创建的模块是否存在，另外会使用`contextResolver`检查使用的目录是否存在。
+`NormalModuleFactory`用于创建普通模块对象，在`create`方法中会调用创建好的`normalResolver`检查将要创建的模块是否存在，另外会使用`loaderResolver`检查使用的loader是否存在。
 
-`ContextModuleFactory`用于创建普通模块对象，在`create`方法中会调用创建好的`normalResolver`检查将要创建的模块是否存在。
+`ContextModuleFactory`用于创建普通模块对象，在`create`方法中会调用创建好的`contextResolver`检查将要创建的目录是否存在。
 
 # 优化
 > 如果对`enhanced-resolve`原理不了解，可以先看[这篇文章](https://juejin.im/post/5e392957f265da574d0ff946)

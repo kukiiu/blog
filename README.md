@@ -17,4 +17,6 @@
 
 [enhanced-resolve](https://juejin.im/post/5e392957f265da574d0ff946)
 
-[目录解析及优化](https://juejin.im/post/5e3c4e4651882549724e14cb)
+[文件路径解析及优化](https://juejin.im/post/5e3c4e4651882549724e14cb)
+
+[loader-runner](https://juejin.im/post/5e3d8ac9518825495853b35c)
