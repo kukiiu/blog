@@ -20,3 +20,5 @@
 [文件路径解析及优化](https://juejin.im/post/5e3c4e4651882549724e14cb)
 
 [loader-runner](https://juejin.im/post/5e3d8ac9518825495853b35c)
+
+[loader](https://juejin.im/post/5e40161a6fb9a07cce74d3db)

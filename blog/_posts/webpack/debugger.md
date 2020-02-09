@@ -177,7 +177,10 @@ parallel会同时执行两个任务task1和task2，并在任务里面开启了�
 const webpack = require('./lib/webpack');
 const config = require('./webpack.config.js');
 const compiler = webpack(config);
-compiler.run()
+compiler.run((err, stat) => {
+    console.warn(err)
+    console.log(stat.toString())
+})
 ```
 4. 添加vscode调试环境 **launch.json**，修改配置项`program`为`"${workspaceFolder}/index.js"`，使用该文件作为启动文件。
 5. index.js加断点，运行调试 
