@@ -1,0 +1,15 @@
+## 流程
+- `JsonModulesPlugin`注册json解析器`JsonParser`及json模版生成器`JsonGenerator`
+- 创建单入口依赖`SingleEntryDependency`
+- `NormalModuleFactory`解析依赖，生成`NormalModule`
+- 构建模块`module.build`:
+    - `runLoaders`解析出文件内容
+    - 使用`JsonParser`解析内容，将json文件转为对象
+    - 给`module`添加依赖`JsonExportsDependency`依赖，用于在输出文件时标记导出内容，作用不大可以先忽略。
+    - 更新模块哈希值
+- 处理模块依赖`processModuleDependencies`，由于`JsonExportsDependency`继承于`NullDependency`，属于不需要解析的依赖，所以这里不需要继续处理依赖。
+- `Compilation.createChunkAssets`渲染输出内容
+    - `MainTemplate.rander`渲染模版
+    - `Template.renderChunkModules`渲染模版
+    - `ModuleTemplate.rander`渲染模版
+    - `JsonGenerator`生成输出模版
