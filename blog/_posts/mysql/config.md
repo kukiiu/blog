@@ -1,0 +1,29 @@
+# [mysqld]
+## GENERAL
+datadir = /var/lib/mysql
+socket = /var/lib/mysql/mysql.sock
+pid_file = /var/lib/mysql/mysql.pid
+user = mysql
+port = 3306
+default_storage_engine = InnoDB
+## INNODB
+innodb_buffer_pool_size = <value>
+innodb_log_file_size = <value>
+innodb_file_per_table = 1
+innodb_flush_method = 0_DIRECT
+## LOGGING
+log_error = /var/lib/mysql/mysql-error.log
+slow_query_log = /var/lib/mysql/mysql-slow.log
+## OTHER
+tmp_table_size = 32M
+max_heap_table_size = 32M
+query_cache_type = 0
+query_cache_size = 0
+max_connections = <value>
+thread_cache = <value>
+table_cache = <value>
+open_files_limit = 65535
+
+# [client]
+sockert = /var/lib/mysql/mysql.socket
+port = 3306
