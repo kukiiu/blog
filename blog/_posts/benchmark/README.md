@@ -1,3 +1,14 @@
+# 目录
+- 基准测试是什么(NO)
+- sysbench基础介绍(TODO)
+- CPU基准测试(TODO)
+- fileio基准测试(TODO)
+- memory基准测试(TODO)
+- thread基准测试(TODO)
+- mutex基准测试(TODO)
+- OLTP基准测试(TODO)
+- http-load(TODO)
+
 # 基准测试
 基准测试是性能测试的一种，是作用于系统的压力测试。通常用于掌握系统的常见性能和对新硬件的可靠性测试。
 - 评估系统的容量和性能
@@ -10,23 +21,20 @@
 - 并发性: 指在单位时间内有多少同时发生的请求。并发性不是结果，通常不是为了测试应用能达到的并发度，而是为了测试应用在不同并发下的性能。
 - 可扩展性: 
 
+## 对比测评
+- 不同的应用系统tps,qps没有可比性。
+- 对于大型系统、业务量非常高、硬件配置足够多的情况下，5000用户并发就足够了；对于中小型系统，1000用户并发就足够了。
+- 单台服务器每天PV计算: 每天总PV = QPS * 3600 * 6
+- 2C4G机器单机一般1000QPS。8C8G机器单机可承受7000QPS。
+
 ## 测试工具
 - ab: http服务器基准测试工具，测试服务器每秒可以处理多少请求
 - http_load: 类似于ab，比ab更灵活
 - JMetter: 测试工具.
 - mysqlslap: mysql自带的工具
 - sysbench: 
-
-# 目录
-- 基准测试是什么(NO)
-- sysbench基础介绍(TODO)
-- CPU基准测试(TODO)
-
+- tpcc-mysql: TPC-C测试工具
 
 # 参考资料
 - [http://www.tpc.org](http://www.tpc.org)
 - 《高性能 MySQL第三版》
-
-# TODO
-- awk sed
-- gunplot
