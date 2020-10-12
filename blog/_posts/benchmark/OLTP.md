@@ -6,6 +6,7 @@ TPC-C是TPC组织发布的一个测试规范，用于模拟测试复杂的在线
 
 TPC-C测试相较于sysbench可以模拟真实业务压力，tpcc-mysql工具。
 
+## sysbench下的OLTP测试
 ### 查找文件目录
 ```
 >> find / -name oltp_*
@@ -46,7 +47,7 @@ Query OK, 1 row affected (2.47 sec)
 
 - 创建数据
 ```
->> sysbench oltp_read_write.lua --tables=2 --table_size=1000000 --mysql-user=root --mysql-password=123456 --mysql-host=192.168.19.132 --mysql-port=3306 --mysql-db=sbtest prepare
+>> sysbench oltp_common.lua --tables=2 --table_size=1000000 --mysql-user=root --mysql-password=123456 --mysql-host=192.168.19.132 --mysql-port=3306 --mysql-db=sbtest prepare
 sysbench 1.0.18 (using system LuaJIT 2.1.0-beta3)
 
 Creating table 'sbtest1'...
@@ -59,7 +60,7 @@ Creating a secondary index on 'sbtest2'...
 
 - 清除测试
 ```
->> sysbench oltp_read_write.lua --tables=2 --mysql-user=root --mysql-password=123456 --mysql-host=192.168.19.132 --mysql-port=3306 --mysql-db=sbtest cleanup
+>> sysbench oltp_common.lua --tables=2 --mysql-user=root --mysql-password=123456 --mysql-host=192.168.19.132 --mysql-port=3306 --mysql-db=sbtest cleanup
 ```
 
 ### 测试

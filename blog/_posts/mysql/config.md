@@ -1,3 +1,5 @@
+# 配置
+
 # [mysqld]
 ## GENERAL
 datadir = /var/lib/mysql

@@ -1,3 +1,7 @@
+# TODO
+- mysql-OLTP
+- TPC-C
+
 # 目录
 - 基准测试是什么(NO)
 - sysbench基础介绍(TODO)
@@ -7,7 +11,7 @@
 - thread基准测试(TODO)
 - mutex基准测试(TODO)
 - OLTP基准测试(TODO)
-- http-load(TODO)
+- http-load
 
 # 基准测试
 基准测试是性能测试的一种，是作用于系统的压力测试。通常用于掌握系统的常见性能和对新硬件的可靠性测试。

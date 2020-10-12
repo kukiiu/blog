@@ -4,6 +4,7 @@
 * Linux下通过Docker安装
 * 源码安装（TODO）
 * Linux下通过apt安装
+* 初始化数据库
 
 ## Linux下通过Docker安装
 ---
@@ -105,6 +106,27 @@ shell> sudo apt-get autoremove
 shell> sudo rm /etc/mysql/ -R
 shell> sudo rm /v/ar/lib/mysql -R
 ```
+
+## 初始化数据库
+* 创建目录
+`mkdir .../3307 3307/data 3307/logs`
+* 新建配置
+```
+[mysqld]
+port = 3307
+server_id = 1
+character-set-server = utf8mb4
+basedir="E:/phpenv/server/mysql/mysql-8.0"
+datadir=".../3307/data"
+log-error=".../3307/logs/mysql.log"
+bind-address=*
+default_authentication_plugin = mysql_native_password
+```
+* 执行初始化
+`mysqld --defaults-file=/3307/my.cnf --initialize`
+* 登录数据库
+密码在`/logs/mysql.log`里
+`mysql --port=3307 -uroot -p`
 
 
 ## 8.0安装问题
